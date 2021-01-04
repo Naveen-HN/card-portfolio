@@ -10,12 +10,13 @@ const picture = document.querySelector('.picture img')
 const purchase = document.querySelector('.purchase')
 const description = document.querySelector('.info h3')
 const sizes = document.querySelector('.sizes')
+const edu = document.querySelector('.Edu')
 
 //Moving animation event
 
 container.addEventListener("mousemove", (e) => {
-    let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-    let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+    let xAxis = (window.innerWidth / 2 - e.pageX) / 45;
+    let yAxis = (window.innerHeight / 2 - e.pageY) / 45;
     card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 });
 //Animate In
@@ -26,11 +27,12 @@ container.addEventListener('mouseenter', e => {
     picture.style.transform = 'translateZ(175px)';
     description.style.transform = 'translateZ(125px)';
     sizes.style.transform = 'translateZ(100px)';
+    edu.style.transform = 'translateZ(100px)';
 })
 
 purchase.addEventListener('mouseover', e => {
     card.style.transition = "none"
-    purchase.style.transform = 'translateZ(175px)';
+    purchase.style.transform = 'translateZ(75px)';
 })
 
 container.addEventListener('mouseout', e => {
@@ -48,4 +50,5 @@ container.addEventListener('mouseleave',
         purchase.style.transform = 'translateZ(0px)';
         description.style.transform = 'translateZ(0px)';
         sizes.style.transform = 'translateZ(0px)';
+        edu.style.transform = 'translateZ(0px)';
     })
